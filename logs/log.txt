@@ -1,0 +1,25 @@
+2020-01-07 12:46:06.727  INFO 29196 --- [main] c.e.s.SimpleServiceApplication           : Starting SimpleServiceApplication on DESKTOP-F7MB6Q4 with PID 29196 (D:\simple-service\target\classes started by Valentine in D:\simple-service)
+2020-01-07 12:46:06.734  INFO 29196 --- [main] c.e.s.SimpleServiceApplication           : No active profile set, falling back to default profiles: default
+2020-01-07 12:46:08.742  INFO 29196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2020-01-07 12:46:08.761  INFO 29196 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-07 12:46:08.762  INFO 29196 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-07 12:46:08.901  INFO 29196 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-07 12:46:08.901  INFO 29196 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2063 ms
+2020-01-07 12:46:09.199  INFO 29196 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-07 12:46:09.476  INFO 29196 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2020-01-07 12:46:09.483  INFO 29196 --- [main] c.e.s.SimpleServiceApplication           : Started SimpleServiceApplication in 4.16 seconds (JVM running for 8.29)
+2020-01-07 12:46:49.935  INFO 28708 --- [main] c.e.s.SimpleServiceApplication           : Starting SimpleServiceApplication on DESKTOP-F7MB6Q4 with PID 28708 (D:\simple-service\target\classes started by Valentine in D:\simple-service)
+2020-01-07 12:46:49.945  INFO 28708 --- [main] c.e.s.SimpleServiceApplication           : No active profile set, falling back to default profiles: default
+2020-01-07 12:46:51.378  INFO 28708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8787 (http)
+2020-01-07 12:46:51.388  INFO 28708 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-01-07 12:46:51.389  INFO 28708 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.29]
+2020-01-07 12:46:51.490  INFO 28708 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-01-07 12:46:51.490  INFO 28708 --- [main] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1446 ms
+2020-01-07 12:46:51.770  INFO 28708 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-07 12:46:52.090  INFO 28708 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8787 (http) with context path ''
+2020-01-07 12:46:52.095  INFO 28708 --- [main] c.e.s.SimpleServiceApplication           : Started SimpleServiceApplication in 3.036 seconds (JVM running for 4.464)
+2020-01-07 12:47:35.522  INFO 29136 --- [main] c.e.s.SimpleServiceApplicationTests      : Starting SimpleServiceApplicationTests on DESKTOP-F7MB6Q4 with PID 29136 (started by Valentine in D:\simple-service)
+2020-01-07 12:47:35.533  INFO 29136 --- [main] c.e.s.SimpleServiceApplicationTests      : No active profile set, falling back to default profiles: default
+2020-01-07 12:47:38.567  INFO 29136 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-01-07 12:47:39.135  INFO 29136 --- [main] c.e.s.SimpleServiceApplicationTests      : Started SimpleServiceApplicationTests in 4.683 seconds (JVM running for 7.236)
+2020-01-07 12:47:39.852  INFO 29136 --- [SpringContextShutdownHook] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'

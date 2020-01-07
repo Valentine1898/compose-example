@@ -1,0 +1,49 @@
+version : "3"
+
+services:
+  java-service:
+    build: .
+    image : java-service:latest
+    container_name: "java-service-container"
+    depends_on:
+      - postgesql
+      - rabbit-mq
+    networks:
+      vpcbr:
+        ipv4_address: 172.20.0.5
+
+
+  postgesql:
+    image: postgres
+    container_name: "postgres-container"
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=test
+    volumes:
+      - /home/andrew/psql_railway_datastorage:/var/lib/postgresql/data
+    networks:
+      vpcbr:
+        ipv4_address: 172.20.0.6
+
+
+  rabbit-mq:
+    image : rabbitmq:3-management
+    container_name: "rabbit-mq"
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      vpcbr:
+        ipv4_address: 172.20.0.4
+
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
+

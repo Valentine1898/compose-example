@@ -1,0 +1,24 @@
+server:
+  port: 8787
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+  servlet:
+    session:
+      timeout: 1728000
+  connection-timeout: 10000000
+logging.file: logs/log.txt
+logging:
+  file:
+    max-history: 20
+    max-size: 10MB
+  level:
+    com.zpoken.dashboarddsa: debug
+
+storage:
+  path: /storage
+
+
+
+
+
