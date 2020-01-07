@@ -1,0 +1,19 @@
+cd lab4
+mkdir units
+docker pull sequenceiq/hadoop-docker:2.7.0
+docker run -v /abs/path/to/lab4/:/lab4 -it sequenceiq/hadoop-docker:2.7.0  /etc/bootstrap.sh -bash
+// дальше все происходит внутри контейнера
+cd lab4
+javac -classpath hadoop-core-1.2.1.jar -d units ProcessUnits.java
+jar -cvf units.jar -C units/ .
+$HADOOP_PREFIX/bin/hadoop fs -mkdir input_dir
+$HADOOP_PREFIX/bin/hadoop fs -put sample.txt input_dir
+$HADOOP_PREFIX/bin/hadoop fs -ls input_dir/
+$HADOOP_PREFIX/bin/hadoop jar units.jar hadoop.ProcessUnits input_dir output_dir
+$HADOOP_PREFIX/bin/hadoop fs -ls output_dir/
+$HADOOP_PREFIX/bin/hadoop fs -cat output_dir/part-00000
+$HADOOP_PREFIX/bin/hadoop fs -get output_dir /lab4
+
+
+
+
