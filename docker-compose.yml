@@ -3,8 +3,9 @@ version : "3"
 services:
   java-service:
     build: .
-    image : java-service:latest
     container_name: "java-service-container"
+    ports:
+      - "8787:8787"
     depends_on:
       - postgesql
       - rabbit-mq
@@ -16,8 +17,7 @@ services:
   postgesql:
     image: postgres
     container_name: "postgres-container"
-    ports:
-      - "5432:5432"
+
     environment:
       - POSTGRES_PASSWORD=root
       - POSTGRES_USER=postgres
@@ -32,9 +32,6 @@ services:
   rabbit-mq:
     image : rabbitmq:3-management
     container_name: "rabbit-mq"
-    ports:
-      - "5672:5672"
-      - "15672:15672"
     networks:
       vpcbr:
         ipv4_address: 172.20.0.4

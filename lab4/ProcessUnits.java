@@ -47,7 +47,7 @@ public class ProcessUnits {
             int val = Integer.MIN_VALUE;
 
             while (values.hasNext()) {
-                if ((val = values.next().get()) > maxavg) {
+                if ((val = values.next().get()) < maxavg) {
                     output.collect(key, new IntWritable(val));
                 }
             }

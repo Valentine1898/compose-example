@@ -1,7 +1,9 @@
 FROM java
+ADD / //
 
-ADD /target/simple-service-0.0.1-SNAPSHOT.jar //
-RUN mkdir /storage
-RUN mkdir /logs
+#FROM maven:3.5-jdk-8-alpine
+#RUN mvn package
 
-ENTRYPOINT ["java","-jar", "simple-service-0.0.1-SNAPSHOT.jar"]
+
+ENTRYPOINT ["java","-jar", "/target/simple-service-0.0.1-SNAPSHOT.jar"]
+

@@ -1,0 +1,4 @@
+com\example\simpleservice\SimpEntity.class
+com\example\simpleservice\SimpController.class
+com\example\simpleservice\EntityDao.class
+com\example\simpleservice\SimpEntity$SimpEntityBuilder.class

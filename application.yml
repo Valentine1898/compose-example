@@ -1,0 +1,45 @@
+spring:
+  rabbitmq:
+    # Тут менять хост или порт рабита
+    host: 172.20.0.4
+    port: 5672
+    username: guest
+    password: guest
+
+  datasource:
+    # Тут менять хост, порт, название базы (test) и логин пароль  постгреса
+    url: jdbc:postgresql://172.20.0.6:5432/test
+    username: postgres
+    password: root
+  jpa:
+    open-in-view: false
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        hibernate.connection.release_mode: after_transaction
+        hibernate.transaction.auto_close_session: true
+        hibernate.autoReconnect: true
+        hibernate.connection.autocommit: false
+        enable_lazy_load_no_trans: true
+        max_fetch_depth: 1
+        temp:
+          use_jdbc_metadata_defaults: false
+
+server:
+  # тут менять порт java приложения
+  port: 8787
+  tomcat:
+    remote-ip-header: x-forwarded-for
+    protocol-header: x-forwarded-proto
+  servlet:
+    session:
+      timeout: 1728000
+  connection-timeout: 10000000
+
+
+
+
+
