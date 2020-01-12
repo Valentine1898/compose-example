@@ -30,7 +30,8 @@ public class SimpController {
         try {
             rabbitTemplate.convertAndSend("test", SimpEntity.builder()
                     .id(2L)
-                    .name("MAsha"));
+                    .name("MAsha")
+                    .build());
             result = result + "<p> В очередь ребита удачно добавлена запись";
         } catch (Exception e) {
             e.printStackTrace();

@@ -9,6 +9,14 @@ services:
     depends_on:
       - postgesql
       - rabbit-mq
+    environment:
+      - POSTGRES_DATABASE=test
+      - POSTGRES_USERNAME=postgres
+      - POSTGRES_PASSWORD=root
+      - POSTGRES_HOST=172.20.0.6
+      - POSTGRES_PORT=5432
+      - RABBIT_HOST=172.20.0.4
+      - RABBIT_PORT=5672
     networks:
       vpcbr:
         ipv4_address: 172.20.0.5
